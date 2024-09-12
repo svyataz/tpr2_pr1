@@ -1,17 +1,18 @@
 public abstract class LeagueOfLegengs_ItemShop {
-    protected int Ability_Haste = 0;
-    protected int Ability_Power = 0;
-    protected int Armor = 0;
-    protected float Heal_and_Shield_Power = 0;
-    protected int Health = 0;
-    protected int Magic_Resistance = 0;
-    protected int Mana = 0;
-    protected float Mana_Regen = 0;
-    protected float Move_Speed = 0;
-    protected int price = 0;
-    protected String Name;
+    private int Ability_Haste = 0;
+    private int Ability_Power = 0;
+    private int Armor = 0;
+    private double Heal_and_Shield_Power = 0;
+    private int Health = 0;
+    private int Magic_Resistance = 0;
+    private int Mana = 0;
+    private double Mana_Regen = 0;
+    private double Move_Speed = 0;
+    private int price = 0;
+    private String Name;
 
-    public LeagueOfLegengs_ItemShop(String name) {
+    public LeagueOfLegengs_ItemShop(int price, String name) {
+        this.price = price;
         Name = name;
     }
 
@@ -39,11 +40,11 @@ public abstract class LeagueOfLegengs_ItemShop {
         Armor = armor;
     }
 
-    public float getHeal_and_Shield_Power() {
+    public double getHeal_and_Shield_Power() {
         return Heal_and_Shield_Power;
     }
 
-    public void setHeal_and_Shield_Power(float heal_and_Shield_Power) {
+    public void setHeal_and_Shield_Power(double heal_and_Shield_Power) {
         Heal_and_Shield_Power = heal_and_Shield_Power;
     }
 
@@ -71,19 +72,19 @@ public abstract class LeagueOfLegengs_ItemShop {
         Mana = mana;
     }
 
-    public float getMana_Regen() {
+    public double getMana_Regen() {
         return Mana_Regen;
     }
 
-    public void setMana_Regen(float mana_Regen) {
+    public void setMana_Regen(double mana_Regen) {
         Mana_Regen = mana_Regen;
     }
 
-    public float getMove_Speed() {
+    public double getMove_Speed() {
         return Move_Speed;
     }
 
-    public void setMove_Speed(float move_Speed) {
+    public void setMove_Speed(double move_Speed) {
         Move_Speed = move_Speed;
     }
 
@@ -101,5 +102,22 @@ public abstract class LeagueOfLegengs_ItemShop {
 
     public void setName(String name) {
         Name = name;
+    }
+
+    @Override
+    public String toString() {
+        return "LeagueOfLegengs_ItemShop{" +
+                "Ability_Haste=" + Ability_Haste +
+                ", Ability_Power=" + Ability_Power +
+                ", Armor=" + Armor +
+                ", Heal_and_Shield_Power=" + Heal_and_Shield_Power +
+                ", Health=" + Health +
+                ", Magic_Resistance=" + Magic_Resistance +
+                ", Mana=" + Mana +
+                ", Mana_Regen=" + Mana_Regen +
+                ", Move_Speed=" + Move_Speed +
+                ", price=" + price +
+                ", Name='" + Name + '\'' +
+                '}';
     }
 }

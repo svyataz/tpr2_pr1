@@ -3,8 +3,8 @@ import java.util.ArrayList;
 public abstract class Support_items extends LeagueOfLegengs_ItemShop{
     protected String PASSIVE = "-";
     protected ArrayList<LeagueOfLegengs_ItemShop> made_of;
-    public Support_items(String name) {
-        super(name);
+    public Support_items(String name, int price) {
+        super(price, name);
         made_of = new ArrayList<>();
     }
 

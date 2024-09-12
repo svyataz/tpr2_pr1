@@ -6,7 +6,35 @@ import java.util.Hashtable;
 public class Main {
     public static void main(String[] args) {
         Dictionary item_list = new Hashtable();
-        item_list.put("Amplifying_Tome", new Basic("Amplifying_Tome"));
-        System.out.println(item_list.get("Amplifying_Tome").toString());
+        LeagueOfLegengs_ItemShop buff;
+
+        buff = new Basic("Amplifying_Tome", 400);
+        buff.setAbility_Power(20);
+        item_list.put("Amplifying_Tome", buff);
+
+        buff = new Basic("Cloth_Armor", 300);
+        buff.setArmor(15);
+        item_list.put("Cloth_Armor", buff);
+
+        buff = new Basic("Faerie_Charm", 250);
+        buff.setMana_Regen(0.5);
+        item_list.put("Faerie_Charm", buff);
+
+        buff = new Basic("Cloth_Armor", 300);
+        buff.setArmor(15);
+        item_list.put("Cloth_Armor", buff);
+
+        buff = new Basic("Cloth_Armor", 300);
+        buff.setArmor(15);
+        item_list.put("Cloth_Armor", buff);
+
+        buff = new Basic("Cloth_Armor", 300);
+        buff.setArmor(15);
+        item_list.put("Cloth_Armor", buff);
+
+        buff = new Basic("Cloth_Armor", 300);
+        buff.setArmor(15);
+        item_list.put("Cloth_Armor", buff);
+        //System.out.println(item_list.get("Amplifying_Tome").toString());
     }
 }

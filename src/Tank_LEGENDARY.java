@@ -2,8 +2,8 @@ import java.util.ArrayList;
 
 public class Tank_LEGENDARY extends Tank_items{
     private String Active;
-    public Tank_LEGENDARY(String name) {
-        super(name);
+    public Tank_LEGENDARY(String name, int price) {
+        super(name, price);
         made_of = new ArrayList<>();
     }
 
