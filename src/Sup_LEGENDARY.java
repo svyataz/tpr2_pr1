@@ -14,4 +14,12 @@ public class Sup_LEGENDARY extends Support_items{
     public void setActive(String active) {
         Active = active;
     }
+
+    @Override
+    public String toString() {
+        return super.toString() + "Sup_LEGENDARY{" +
+                "Active='" + Active + '\'' +
+                '}';
+    }
+
 }
