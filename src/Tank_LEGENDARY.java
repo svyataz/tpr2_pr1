@@ -15,10 +15,4 @@ public class Tank_LEGENDARY extends Tank_items{
         Active = active;
     }
 
-    @Override
-    public String toString() {
-        return super.toString() + "Sup_LEGENDARY{" +
-                "Active='" + Active + '\'' +
-                '}';
-    }
 }

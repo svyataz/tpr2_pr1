@@ -24,11 +24,4 @@ public abstract class Tank_items extends LeagueOfLegengs_ItemShop{
         made_of.add(ob);
     }
 
-    @Override
-    public String toString() {
-        return super.toString() + "Support_items{" +
-                "PASSIVE='" + PASSIVE + '\'' +
-                ", made_of=" + made_of +
-                '}';
-    }
 }

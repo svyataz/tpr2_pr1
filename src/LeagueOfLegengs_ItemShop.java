@@ -104,20 +104,4 @@ public abstract class LeagueOfLegengs_ItemShop {
         Name = name;
     }
 
-    @Override
-    public String toString() {
-        return "LeagueOfLegengs_ItemShop{" +
-                "Ability_Haste=" + Ability_Haste +
-                ", Ability_Power=" + Ability_Power +
-                ", Armor=" + Armor +
-                ", Heal_and_Shield_Power=" + Heal_and_Shield_Power +
-                ", Health=" + Health +
-                ", Magic_Resistance=" + Magic_Resistance +
-                ", Mana=" + Mana +
-                ", Mana_Regen=" + Mana_Regen +
-                ", Move_Speed=" + Move_Speed +
-                ", price=" + price +
-                ", Name='" + Name + '\'' +
-                '}';
-    }
 }

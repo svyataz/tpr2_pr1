@@ -15,11 +15,5 @@ public class Sup_LEGENDARY extends Support_items{
         Active = active;
     }
 
-    @Override
-    public String toString() {
-        return super.toString() + "Sup_LEGENDARY{" +
-                "Active='" + Active + '\'' +
-                '}';
-    }
 
 }
