@@ -1,4 +1,4 @@
-public abstract class LeagueOfLegengs_ItemShop {
+public abstract class LeagueOfLegends_ItemShop {
     private int Ability_Haste = 0;
     private int Ability_Power = 0;
     private int Armor = 0;
@@ -11,7 +11,7 @@ public abstract class LeagueOfLegengs_ItemShop {
     private int price = 0;
     private String Name;
 
-    public LeagueOfLegengs_ItemShop(int price, String name) {
+    public LeagueOfLegends_ItemShop(int price, String name) {
         this.price = price;
         Name = name;
     }

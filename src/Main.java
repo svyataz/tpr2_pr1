@@ -1,12 +1,13 @@
-import java.util.ArrayList;
-import java.util.Dictionary;
-import java.util.Hashtable;
+import java.io.File;
+import java.io.IOException;
+import java.util.*;
+import java.util.function.Consumer;
 
 // Press Shift twice to open the Search Everywhere dialog and type `show whitespaces`,
 // then press Enter. You can now see whitespace characters in your code.
 public class Main {
     public static void main(String[] args) {
-        Dictionary<String, LeagueOfLegengs_ItemShop> item_list = new Hashtable();
+        Dictionary<String, LeagueOfLegends_ItemShop> item_list = new Hashtable();
         ArrayList<String> names = new ArrayList<>();
         Basic buff;
         //базовые предметы
@@ -192,8 +193,11 @@ public class Main {
         TLbuff.addToMade_of(item_list.get("Winged_Moonplate"));
         item_list.put("Triailblazer", TLbuff);
 
-        for(String i: names){
-            System.out.println(item_list.get(i).toString());
-        }
+        queries(item_list, names);
+    }
+    public static void queries(Dictionary<String, LeagueOfLegends_ItemShop> iten_list, ArrayList<String> names){
+        System.out.println("Класс для запроса: ");
+        Scanner sc = new Scanner(System.in);
+        String C = new String(sc.nextLine());
     }
 }

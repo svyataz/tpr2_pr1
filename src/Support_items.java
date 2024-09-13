@@ -1,8 +1,8 @@
 import java.util.ArrayList;
 
-public abstract class Support_items extends LeagueOfLegengs_ItemShop{
+public abstract class Support_items extends LeagueOfLegends_ItemShop {
     private String PASSIVE = "-";
-    protected ArrayList<LeagueOfLegengs_ItemShop> made_of;
+    protected ArrayList<LeagueOfLegends_ItemShop> made_of;
     public Support_items(String name, int price) {
         super(price, name);
         made_of = new ArrayList<>();
@@ -16,11 +16,11 @@ public abstract class Support_items extends LeagueOfLegengs_ItemShop{
         this.PASSIVE = PASSIVE;
     }
 
-    public ArrayList<LeagueOfLegengs_ItemShop> getMade_of() {
+    public ArrayList<LeagueOfLegends_ItemShop> getMade_of() {
         return made_of;
     }
 
-    public void addToMade_of(LeagueOfLegengs_ItemShop ob) {
+    public void addToMade_of(LeagueOfLegends_ItemShop ob) {
         made_of.add(ob);
     }
 
