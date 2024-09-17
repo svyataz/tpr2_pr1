@@ -3,8 +3,6 @@ import java.io.IOException;
 import java.util.*;
 import java.util.function.Consumer;
 
-// Press Shift twice to open the Search Everywhere dialog and type `show whitespaces`,
-// then press Enter. You can now see whitespace characters in your code.
 public class Main {
     public static void main(String[] args) {
         Dictionary<String, LeagueOfLegends_ItemShop> item_list = new Hashtable();
@@ -192,12 +190,54 @@ public class Main {
         TLbuff.addToMade_of(item_list.get("Chian_Vest"));
         TLbuff.addToMade_of(item_list.get("Winged_Moonplate"));
         item_list.put("Triailblazer", TLbuff);
-
         queries(item_list, names);
     }
-    public static void queries(Dictionary<String, LeagueOfLegends_ItemShop> iten_list, ArrayList<String> names){
-        System.out.println("Класс для запроса: ");
-        Scanner sc = new Scanner(System.in);
-        String C = new String(sc.nextLine());
+
+    public static void queries(Dictionary<String, LeagueOfLegends_ItemShop> item_list, ArrayList<String> names) {
+
+        System.out.println("---------items made of Cloath_Armor---------");
+        for (String i : names) {
+            if ( item_list.get(i) instanceof Tank_EPIC){
+                if (item_list.get(i).getMade_of().contains(item_list.get("Cloth_Armor"))) {
+                    System.out.println(i + ": " +item_list.get(i).getClass() + " is made of Cloth_Armor");
+                    for (String j : names) {
+                        if (item_list.get(j).getMade_of().contains(item_list.get(i))) {
+                            System.out.println(j + ": " + item_list.get(j).getClass() + " is made of " + i);
+                        }
+                    }
+                    System.out.println();
+                }
+            }
+        }
+
+        System.out.println("---------items with Magic Resistance---------\n\n");
+        for (String i : names) {
+            if ( item_list.get(i) instanceof Tank_items){
+                if (item_list.get(i).getMagic_Resistance() > 0) {
+                    System.out.println(i + ": " +item_list.get(i).getClass() + " Magic Resistance greater than 0 ");
+                    for (String j : names) {
+                        if (item_list.get(j).getMade_of().contains(item_list.get(i))) {
+                            System.out.println(j + ": " + item_list.get(j).getClass() + " is made of " + i);
+                        }
+                    }
+                    System.out.println();
+                }
+            }
+        }
+
+        System.out.println("---------items with price less than 2300---------\n\n");
+        for (String i : names) {
+            if ( item_list.get(i) instanceof Support_items){
+                if (item_list.get(i).getPrice() < 23000) {
+                    System.out.println(i + ": " +item_list.get(i).getClass() + " price less than 2300 ");
+                    for (String j : names) {
+                        if (item_list.get(j).getMade_of().contains(item_list.get(i))) {
+                            System.out.println(j + ": " + item_list.get(j).getClass() + " is made of " + i);
+                        }
+                    }
+                    System.out.println();
+                }
+            }
+        }
     }
 }

@@ -1,4 +1,7 @@
+import java.util.ArrayList;
+
 public abstract class LeagueOfLegends_ItemShop {
+    protected ArrayList<LeagueOfLegends_ItemShop> made_of;
     private int Ability_Haste = 0;
     private int Ability_Power = 0;
     private int Armor = 0;
@@ -10,10 +13,20 @@ public abstract class LeagueOfLegends_ItemShop {
     private double Move_Speed = 0;
     private int price = 0;
     private String Name;
+    protected String PASSIVE = "-";
 
     public LeagueOfLegends_ItemShop(int price, String name) {
         this.price = price;
         Name = name;
+        made_of = new ArrayList<>();
+    }
+
+    public String getPASSIVE() {
+        return PASSIVE;
+    }
+
+    public void setPASSIVE(String PASSIVE) {
+        this.PASSIVE = PASSIVE;
     }
 
     public int getAbility_Haste() {
@@ -102,6 +115,14 @@ public abstract class LeagueOfLegends_ItemShop {
 
     public void setName(String name) {
         Name = name;
+    }
+
+    public ArrayList<LeagueOfLegends_ItemShop> getMade_of() {
+        return made_of;
+    }
+
+    public void addToMade_of(LeagueOfLegends_ItemShop ob) {
+        made_of.add(ob);
     }
 
 }
