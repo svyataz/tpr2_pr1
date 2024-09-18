@@ -1,28 +1,32 @@
-public abstract class LeagueOfLegengs_ItemShop {
-    protected int Ability_Haste = 0;
-    protected int Ability_Power = 0;
-    protected int Armor = 0;
-    protected double Heal_and_Shield_Power = 0;
-    protected int Health = 0;
-    protected int Magic_Resistance = 0;
-    protected int Mana = 0;
-    protected double Mana_Regen = 0;
-    protected double Move_Speed = 0;
-    protected int price = 0;
-    protected String Name;
+import java.util.ArrayList;
 
-    public LeagueOfLegengs_ItemShop(int ability_Haste, int ability_Power, int armor, double heal_and_Shield_Power, int health, int magic_Resistance, int mana, double mana_Regen, double move_Speed, int price, String name) {
-        Ability_Haste = ability_Haste;
-        Ability_Power = ability_Power;
-        Armor = armor;
-        Heal_and_Shield_Power = heal_and_Shield_Power;
-        Health = health;
-        Magic_Resistance = magic_Resistance;
-        Mana = mana;
-        Mana_Regen = mana_Regen;
-        Move_Speed = move_Speed;
+public abstract class LeagueOfLegends_ItemShop {
+    protected ArrayList<LeagueOfLegends_ItemShop> made_of;
+    private int Ability_Haste = 0;
+    private int Ability_Power = 0;
+    private int Armor = 0;
+    private double Heal_and_Shield_Power = 0;
+    private int Health = 0;
+    private int Magic_Resistance = 0;
+    private int Mana = 0;
+    private double Mana_Regen = 0;
+    private double Move_Speed = 0;
+    private int price = 0;
+    private String Name;
+    protected String PASSIVE = "-";
+
+    public LeagueOfLegends_ItemShop(int price, String name) {
         this.price = price;
         Name = name;
+        made_of = new ArrayList<>();
+    }
+
+    public String getPASSIVE() {
+        return PASSIVE;
+    }
+
+    public void setPASSIVE(String PASSIVE) {
+        this.PASSIVE = PASSIVE;
     }
 
     public int getAbility_Haste() {
@@ -112,4 +116,13 @@ public abstract class LeagueOfLegengs_ItemShop {
     public void setName(String name) {
         Name = name;
     }
+
+    public ArrayList<LeagueOfLegends_ItemShop> getMade_of() {
+        return made_of;
+    }
+
+    public void addToMade_of(LeagueOfLegends_ItemShop ob) {
+        made_of.add(ob);
+    }
+
 }

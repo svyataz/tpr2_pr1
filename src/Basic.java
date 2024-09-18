@@ -1,5 +1,5 @@
-public class Basic extends LeagueOfLegengs_ItemShop{
-    public Basic(int ability_Haste, int ability_Power, int armor, double heal_and_Shield_Power, int health, int magic_Resistance, int mana, double mana_Regen, double move_Speed, int price, String name) {
-        super(ability_Haste, ability_Power, armor, heal_and_Shield_Power, health, magic_Resistance, mana, mana_Regen, move_Speed, price, name);
+public class Basic extends LeagueOfLegends_ItemShop {
+    public Basic(String name, int price) {
+        super(price, name);
     }
 }
